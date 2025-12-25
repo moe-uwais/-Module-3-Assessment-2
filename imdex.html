@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Majestic Palet — Menu</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pap7Y1qQXk2z0YIc1Q7fXGqz3P7Z2K2l7lz9m1Z6s3s6Qk3eMZ3E1J3gQ7Y1Zq9Gf5Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container header-row">
+                <img src="images/logo.jpg" alt="Majestic Palet logo" class="logo">
+                <div>
+                    <h1 class="site-title">Majestic Palet</h1>
+                    <p class="site-tag">Bold Flavors • Warm Hospitality</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="container">
+            <!-- Home / Categories View -->
+            <section id="view-home" class="view">
+                <h2 class="section-title">Choose a category</h2>
+                <ul class="categories">
+                    <li class="category" data-category="starters"><img src="images/chicken skewers.jpg" alt="Starters"><h3>Starters</h3></li>
+                    <li class="category" data-category="mains"><img src="images/grilled salmon.jpg" alt="Mains"><h3>Main Meals</h3></li>
+                    <li class="category" data-category="desserts"><img src="images/Opera Cake.jpg" alt="Desserts"><h3>Desserts</h3></li>
+                    <li class="category" data-category="drinks"><img src="images/capachino.jpg" alt="Drinks"><h3>Drinks</h3></li>
+                                </ul>
+            </section>
+
+            <!-- Category Items View -->
+            <section id="view-category" class="view hidden">
+                <button class="back-btn" data-target="home"><i class="fa fa-arrow-left"></i> Back</button>
+                <h2 id="category-title" class="section-title">Category</h2>
+                <ul id="items-list" class="items-grid"></ul>
+            </section>
+
+            <!-- Item Detail / Order View -->
+            <section id="view-item" class="view hidden">
+                <button class="back-btn" data-target="category"><i class="fa fa-arrow-left"></i> Back</button>
+                <div class="item-detail">
+                    <img id="item-image" src="" alt="">
+                    <div class="item-meta">
+                        <h2 id="item-name"></h2>
+                        <p class="price" id="item-price"></p>
+                        <p class="serving" id="item-serving"></p>
+                        <p class="item-desc" id="item-desc"></p>
+
+                        <form id="order-form">
+                            <fieldset>
+                                <legend>Extras</legend>
+                                <ul id="extras-list" class="extras-list"></ul>
+                            </fieldset>
+
+                            <label for="notes">Special notes / requests</label>
+                            <textarea id="notes" name="notes" rows="3" placeholder="Add any extra requests..."></textarea>
+
+                            <button type="submit" class="place-order-btn">Place Order</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Thank You View -->
+            <section id="view-thanks" class="view hidden thanks-view">
+                <h2>Thanks for your order!</h2>
+                <p id="thanks-summary"></p>
+                <p><a href="#" id="back-home" class="home-link">Return to homepage</a></p>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <p>&copy; 2025 Majestic Palet — All rights reserved</p>
+            </div>
+        </footer>
+
+        <script src="app.js"></script>
+    </body>
+</html>
